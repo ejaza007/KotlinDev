@@ -2,6 +2,12 @@ fun main() {
     printFinalTemperature(27.0, "Celsius", "Fahrenheit") { celsiusToFahrenheit(it) }
     printFinalTemperature(350.0, "Kelvin", "Celsius") { kelvinToCelsius(it) }
     printFinalTemperature(10.0, "Fahrenheit", "Kelvin") { fahrenheitToKelvin(it) }
+
+    var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Entertainment")
+    smartDevice.turnOn()
+
+    smartDevice = SmartLightDevice("Google Light", "Utility")
+    smartDevice.turnOn()
 }
 
 fun celsiusToFahrenheit(celsius: Double): Double {
